@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Julia</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* Adiciona estilo para o círculo ao redor do cursor */
+        .cursor {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 255, 255, 0.7);
+            pointer-events: none; /* Não interfere na interação com outros elementos */
+            transform: translate(-50%, -50%);
+            transition: width 0.2s ease, height 0.2s ease;
+        }
+
+        .cursor-hover {
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+             <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+        <script src="script.js"></script>
+    </header>
+    <main>
+        <div class="intro-text">
+            <h1>Julia Jeziorny</h1>
+            <p>
+                Sou estudante de Engenharia de Software, apaixonada por tecnologia e desenvolvimento.
+            </p><br>
+            <p>
+                Meu primeiro projeto me mostrou a complexidade e o aprendizado contínuo da área, o que me motivou a seguir na graduação.
+            </p><br>
+            <p>
+                Neste portfólio, compartilho projetos que refletem meu crescimento e dedicação.
+            </p><br>
+            <p>
+                Além das habilidades técnicas, valorizo a comunicação e o trabalho em equipe, sempre buscando soluções de qualidade.
+            </p><br>
+                 
+        </div>
+        <div class="gif-container">
+            <img src="fotoJulia.jpeg" alt="Descrição do GIF">
+        </div>
+    </main>
+
+    <section id="projects" class="container my-5">
+        <h1 class="text-center mb-4">Meus Projetos</h1>
+        <br>
+        <br>
+        <div class="card-container">
+            <!-- Projeto 1 -->
+            <div class="card">
+                <img id="calculadora-img" src="imagemCalculadoraOPP.png" class="card-img-top" alt="Imagem do Projeto 1">
+                <div class="card-body">
+                    <h5 class="card-title">Calculadora Orientada a Objetos</h5>
+                    <p class="card-text">Foi um projeto realizado para entender melhor como funcionam as estruturas básicas e o conceito de Orientação a Objetos em Javascript. Nesse projeto, foi utilizado CSS e Javascript.</p>
+                    <a href="https://jjziorny.github.io/CalculadoraOOP/" target="_blank" class="btn btn-three">Ver projeto</a>
+                </div>
+            </div>
+    
+            <!-- Projeto 2 -->
+            <div class="card">
+                 <img id="rh-img" src="Captura de tela 2023-11-20 205326.png" class="card-img-top" alt="Imagem do Projeto 2">
+                <div class="card-body">
+                    <h5 class="card-title">Sistema de RH</h5>
+                    <p class="card-text">
+                        Esse projeto foi realizado junto com a minha dupla de TCC, ele foi feito com PHP, HTML e CSS.
+                         
+                        <br>
+                            O objetivo era construir um site onde os candidatos e as empresas pudessem se conectar de forma simples.
+                        <br>
+                         <br>
+                            Esse projeto possui diversas funcionalidades, essas funcionalidades consistem em o candidato conseguir visualizar as vagas
+                            cadastradas pela empresa, consegue se cadastrar como candidato e agendar uma data e horário de acordo com os quais a empresa 
+                            disponibilizar.
+                    </p>
+                        
+                    <a href="https://github.com/jjziorny/sistemaDeVagas" target="_blank" class="btn btn-three">Ver projeto</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img" src="" alt="Imagem ampliada">
+    </div>
+
+    
+
+    <!--<section id="about-me">
+        <div class="text">
+            <h2>Sobre Mim</h2>
+            <p>
+                Olá! Me chamo Julia, sou estudante de engenharia de software apaixonada por tecnologia e desenvolvimento. 
+                Minha tragetória foi marcada pelo meu primeiro projeto de seleção, nele consegui entender a complexidade que a
+                tecnologia tem, consegui aprender muito e entender como as coisas funcionam. 
+                <p>
+                    Logo resolvi ingressar em uma graduação para continuar expandindo as minhas diversas habilidades. 
+                    Neste portfólio, você encontrará alguns dos projetos que desenvolvi, cada um refletindo meu crescimento e dedicação.
+                
+                </p>
+                <p> 
+                    Mas não é só de habilidades técnicas que as pessoas vivem, eu amo me comunicar, me apresentar em público, 
+                    gosto de estar com pessoas e aprender com elas. Outra coisa que é muito importante para mim é estar inserida em uma equipe 
+                    que faz acontecer e que entrega qualidade e solução sempre aprimorando e buscando resolver de fato os problemas.
+      
+                </p>
+                           </p>
+        </div>
+        <div class="photo">
+            <img src="fotoJulia.jpeg" alt="Minha Foto">
+        </div>
+    </section>-->
+
+
+
+    <section id="contact">
+        <h2>Entre em contato</h2>
+        <ul class="social-links">
+            <li>
+                <a href="https://www.linkedin.com/in/julia-jeziorny-9b9963229" target="_blank" aria-label="LinkedIn">
+                    <img src="images/logotipo-do-linkedin.png" alt="LinkedIn" class="social-icon"> 
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/jjziorny" target="_blank" aria-label="GitHub">
+                    <img src="images/github.png" alt="GitHub" class="social-icon">
+                </a>
+            </li>
+            <li>
+                <a href="https://wa.me/5545998274340" target="_blank" aria-label="WhatsApp">
+                    <img src="images/whatsapp.png" alt="WhatsApp" class="social-icon"> 
+                </a>
+            </li>
+        </ul>
+    </section>
+    <script>
+        // Adiciona a funcionalidade do cursor customizado
+        const cursor = document.querySelector('.cursor');
+    
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = `${e.pageX}px`;
+            cursor.style.top = `${e.pageY}px`;
+        });
+    
+        document.addEventListener('mouseover', (e) => {
+            if (e.target.tagName === 'A' || e.target.tagName === 'IMG') {
+                cursor.classList.add('cursor-hover');
+            }
+        });
+    
+        document.addEventListener('mouseout', (e) => {
+            if (e.target.tagName === 'A' || e.target.tagName === 'IMG') {
+                cursor.classList.remove('cursor-hover');
+            }
+        });
+
+        function openLightbox(src) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = src;
+            lightbox.style.display = 'flex';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+
+        // Adiciona a funcionalidade ao clicar nas imagens dos cards
+        document.querySelectorAll('.card-img-top').forEach(img => {
+            img.addEventListener('click', () => {
+                openLightbox(img.src);
+            });
+        });
+    </script>
+    
+
+</body>
+</html>
