@@ -400,3 +400,482 @@ p {
         transform: translate(0, -50%); /* Posição final sem o salto */
     }
 }
+
+body {
+    background-color: #091e33; /* Azul escuro */
+    color: #ffffff; /* Cor do texto para contraste */
+    font-family: 'Glober', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow-x: hidden; /* Garante que não haja rolagem horizontal */
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav {
+    position: absolute; /* Corrigido para "absolute" para que a navbar fique no canto */
+    z-index: 2; /* Mantém a navbar sobreposta ao fundo */
+    right: 100px; /* Posiciona a navbar no canto direito */
+    top: 20px; /* Posiciona a navbar no topo */
+    display: flex;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.intro-text {
+    width: 50%; /* Ocupa metade da tela */
+    text-align: left;
+    position: absolute;
+    z-index: 2;
+    left: 10%; /*Move o texto um pouco para a esquerda*/
+    top: 50%;
+    transform: translateY(-50%);
+    animation: slide-in 2s ease-in-out; /* Aplica a animação de deslizar pela esquerda */
+}
+
+.intro-text h1 {
+    font-size: 80px;
+    color: #ffffff;
+    text-align: justify;
+}
+
+.intro-text p {
+    font-size: 20px;
+    color: #cccccc;
+    margin: 0;
+    text-align: justify;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 100px; /* Espaço para a rolagem até a seção dos projetos */
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    color: #ffffff; /* Cor dos títulos */
+}
+
+p {
+    color: #cccccc; /* Cor do texto dos parágrafos */
+}
+
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translate(-100%, -50%); /* Começa fora da tela à esquerda */
+    }
+    to {
+        opacity: 1;
+        transform: translate(0, -50%); /* Posição final */
+    }
+}
+#projects {
+    padding: 50px 0;
+    text-align: center;
+}
+/* Define a posição inicial oculta */
+#projects {
+    opacity: 0;
+    transform: translateY(50px); /* Ajuste a posição inicial conforme necessário */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Define o estilo quando a seção estiver visível */
+#projects.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.card-container {
+    display: flex;
+    justify-content: center; /* Centraliza os cards */
+    gap: 20px; /* Espaço entre os cards */
+    flex-wrap: wrap; /* Permite que os cards quebrem linha em telas menores */
+}
+
+.card {
+    background-color: #373538; /* Mantém a cor de fundo dos projetos */
+    color: #ffffff; /* Cor do texto nos cartões */
+    border: none; /* Remove a borda padrão do Bootstrap */
+    border-radius: 8px; /* Mantém o arredondamento */
+    max-width: 400px; /* Largura máxima dos cards */
+    width: 100%; /* Garante que o card ocupe a largura disponível */
+    margin: 0 70px; /* Espaçamento horizontal entre os cards */
+}
+
+.card-img-top {
+    width: 100%;
+    height: 300px; /* Define uma altura fixa para a imagem */
+    object-fit: cover;
+    border-top-left-radius: 8px; /* Arredonda os cantos da imagem junto com o card */
+    border-top-right-radius: 8px;
+}
+.row {
+    display: flex;
+    justify-content: space-around; /* Garante espaçamento uniforme entre os cards */
+}
+.card-body {
+    padding: 25px;
+    
+}
+
+.card-title {
+    font-size: 18px; /* Tamanho do texto do título */
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 15px; /* Tamanho do texto */
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+
+/* Estilo para a imagem da calculadora */
+#calculadora-img {
+    width: 100%;
+    height: 300px; /* Ajuste a altura conforme necessário */
+    object-fit: cover; /* Garante que a imagem preencha o card */
+    border-top-left-radius: 8px; /* Mantém o arredondamento dos cantos superiores */
+    border-top-right-radius: 8px; /* Mantém o arredondamento dos cantos superiores */
+}
+
+/* Estilo para a imagem do sistema de RH */
+#rh-img {
+    width: 100%;
+    height: 160px; /* Ajuste a altura conforme necessário */
+    object-fit: cover; /* Garante que a imagem preencha o card */
+    border-top-left-radius: 8px; /* Mantém o arredondamento dos cantos superiores */
+    border-top-right-radius: 8px; /* Mantém o arredondamento dos cantos superiores */
+}
+
+.dark-mode-img {
+    width: 10%; /* Ajusta a largura da imagem para preencher o card */
+    height: 50px; /* Reduz a altura da imagem */
+    object-fit: cover; /* Garante que a imagem preencha o card sem distorção */
+    border-top-left-radius: 8px; /* Mantém o arredondamento dos cantos superiores */
+    border-top-right-radius: 8px;
+}
+
+.box-3 {
+    margin-top: 20px; /* Espaço entre o parágrafo e o botão */
+}
+
+.btn-three {
+    color: #FFF;
+    background-color: #16293d; /* Adicione uma cor de fundo se necessário */
+    transition: all 0.5s;
+    position: relative;
+    padding: 8px 16px; /* Tamanho do botão */
+    border: none; /* Remove a borda padrão */
+    font-size: 14px; /* Tamanho do texto no botão */
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.btn-three::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s;
+}
+
+.btn-three:hover::before {
+    opacity: 0;
+    transform: scale(0.5, 0.5);
+}
+
+.btn-three::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transform: scale(1.2, 1.2);
+}
+
+.btn-three:hover::after {
+    opacity: 1;
+    transform: scale(1, 1);
+}
+
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+}
+
+.lightbox:target {
+    display: flex;
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column; /* Alinha os cards verticalmente em telas menores */
+        align-items: center;
+    }
+}
+
+/* 
+#about-me {
+    padding: 50px;
+    background-color: #091e33;  Azul ainda mais escuro para distinguir a seção 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+}
+
+#about-me .text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+#about-me .text h2 {
+    font-size: 32px;
+    margin-top: 0;
+}
+
+#about-me .text p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+#about-me .photo {
+    flex: 1;
+    text-align: center;
+}
+
+#about-me .photo img {
+    max-width: 100%;
+    height: 400px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+#about-me {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+  
+  #about-me.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }*/
+
+  #contact {
+    padding: 50px;
+    background-color: #091e33; /* Azul escuro para combinar com o tema */
+    text-align: center;
+    color: #ffffff;
+}
+
+#contact h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Alinha os ícones ao centro */
+}
+
+.social-links li {
+    margin: 0 15px;
+}
+
+.social-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.social-links a:hover {
+    color: #cccccc; /* Cor ao passar o mouse */
+}
+
+.social-icon {
+    width: 24px; /* Ajuste o tamanho do ícone conforme necessário */
+    height: 24px;
+    margin-right: 8px; /* Espaço entre o ícone e o texto */
+    vertical-align: middle; /* Alinha o ícone com o texto */
+}
+
+.gif-container {
+    width: 35%;
+    position: absolute;
+    z-index: 2;
+    right: -5%; 
+    top: 50%;
+    transform: translateY(-50%);
+    animation: fade-in-right 2s ease-out; /* Animação ajustada */
+}
+
+.gif-container img {
+    max-width: 100%;
+    height: 400px;
+    border: 5px solid #ffffff; /* Moldura branca de 5px */
+    object-fit: cover;
+}
+
+@keyframes fade-in-right {
+    from {
+        opacity: 0;
+        transform: translate(100%, -50%); /* Mantém a posição vertical consistente */
+    }
+    to {
+        opacity: 1;
+        transform: translate(0, -50%); /* Posição final sem o salto */
+    }
+}
+
+/* Ajustes para telas menores (max-width: 768px) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Empilha o conteúdo do header */
+        align-items: flex-start; /* Alinha o conteúdo à esquerda */
+        padding: 10px;
+    }
+
+    nav {
+        position: static; /* Altera o posicionamento da navbar */
+        margin-top: 10px; /* Adiciona um espaço entre o título e a navbar */
+    }
+
+    nav ul {
+        flex-direction: column; /* Empilha os itens da navbar */
+        align-items: flex-start; /* Alinha os links da navbar à esquerda */
+    }
+
+    nav ul li {
+        margin-left: 0; /* Remove a margem esquerda dos itens da navbar */
+        margin-bottom: 10px; /* Adiciona espaço entre os itens */
+    }
+
+    .intro-text {
+        width: 90%; /* Ocupa mais espaço na tela menor */
+        left: 5%; /* Centraliza o texto na tela */
+        top: 40%; /* Ajusta a posição vertical */
+        transform: translateY(-40%); /* Ajusta a posição do texto */
+        font-size: 16px; /* Reduz o tamanho da fonte */
+    }
+
+    .intro-text h1 {
+        font-size: 36px; /* Diminui o tamanho do título */
+    }
+
+    .intro-text p {
+        font-size: 16px; /* Ajusta o tamanho do texto */
+    }
+
+    .gif-container {
+        width: 90%; /* Ajusta o tamanho da imagem para telas menores */
+        right: 5%;
+        top: 60%; /* Ajusta a posição da imagem */
+        height: auto;
+        transform: translateY(-50%); /* Mantém o alinhamento vertical */
+    }
+
+    .card-container {
+        flex-direction: column; /* Empilha os cards verticalmente */
+        align-items: center; /* Centraliza os cards */
+        gap: 20px; /* Espaço entre os cards */
+        padding: 0 10px; /* Adiciona espaçamento lateral */
+    }
+
+    .card {
+        margin: 20px 0; /* Ajusta a margem entre os cards */
+        width: 100%; /* Garante que os cards ocupem a largura disponível */
+        max-width: 100%; /* Remove a restrição de largura máxima para dispositivos móveis */
+    }
+
+    #contact {
+        padding: 30px 10px; /* Reduz o padding para dispositivos móveis */
+    }
+
+    .social-links {
+        flex-direction: column; /* Empilha os ícones socialmente */
+        align-items: center; /* Centraliza os ícones */
+    }
+
+    .social-links li {
+        margin-bottom: 10px; /* Adiciona espaço entre os itens */
+    }
+}
+
+
